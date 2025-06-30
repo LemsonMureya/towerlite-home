@@ -89,28 +89,12 @@
             width: 100%;
             height: 100%;
             border-radius: 28px;
-            padding: 20px 15px;
-            box-sizing: border-box;
             overflow: hidden;
-            color: #333;
+            /* This is where the magic happens */
+            background-image: url('assets/app-screenshot.png');
+            background-size: cover;
+            background-position: center;
         }
-        .map-snapshot {
-            height: 90px;
-            background-color: #d1e7ff;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            background-image: linear-gradient(rgba(0, 122, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 122, 255, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        .app-header { font-weight: 600; font-size: 14px; text-align: center; margin-bottom: 10px; color: #888; }
-        .status-card { background: var(--white-color); padding: 12px; border-radius: 10px; margin-top: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .status-card .card-header { display: flex; align-items: center; margin-bottom: 8px; }
-        .status-card .avatar { width: 32px; height: 32px; border-radius: 16px; margin-right: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 600; }
-        .status-card .user { font-weight: 600; font-size: 14px; }
-        .status-card .comment { font-size: 13px; margin-top: 5px; line-height: 1.4; }
-        .status-card .actions { display: flex; gap: 20px; margin-top: 12px; font-size: 13px; color: #888; padding-top: 8px; border-top: 1px solid #f2f2f2; }
-        .status-on { border-left: 4px solid #34C759; }
-        .status-off { border-left: 4px solid #FF3B30; }
 
         /* General Section Styling */
         .section { padding: 80px 20px; text-align: center; }
@@ -166,18 +150,7 @@
             <div class="hero-visual">
                 <div class="phone-mockup">
                     <div class="app-screen">
-                        <div class="map-snapshot"></div>
-                        <div class="app-header">Latest Reports</div>
-                        <div class="status-card status-on">
-                            <div class="card-header"><div class="avatar" style="background-color: #5856d6;">JM</div><div class="user">JohnM</div></div>
-                            <div class="comment">Power is back in the Avenues!</div>
-                            <div class="actions"><span>❤️ 12</span><span>💬 3</span><span>➤</span></div>
-                        </div>
-                        <div class="status-card status-off">
-                            <div class="card-header"><div class="avatar" style="background-color: #ff9500;">SD</div><div class="user">SarahD</div></div>
-                            <div class="comment">Still dark in Avondale... anyone have an update?</div>
-                            <div class="actions"><span>❤️ 5</span><span>💬 8</span><span>➤</span></div>
-                        </div>
+                        <!-- The screenshot of your app will appear here -->
                     </div>
                 </div>
             </div>
