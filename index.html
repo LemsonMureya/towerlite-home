@@ -4,85 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TowerLite - Community Power Status Reporting</title>
+    <!-- Google Fonts for a cleaner look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #007AFF;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white-color: #ffffff;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0,0,0,0.08);
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            /* Use Poppins font with a standard fallback */
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background: #f8f9fa;
-            color: #333;
+            background: var(--white-color);
+            color: var(--dark-color);
         }
+        
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* --- Header Section --- */
         .header {
             text-align: center;
-            padding: 60px 20px;
-            background: #007AFF;
-            color: white;
-            border-radius: 0 0 20px 20px;
+            padding: 80px 20px;
+            /* A subtle gradient background */
+            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+            color: var(--white-color);
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 20px rgba(0, 122, 255, 0.2);
         }
         .header h1 {
-            font-size: 48px;
+            font-size: 52px;
+            font-weight: 700;
             margin: 0;
+            letter-spacing: -1px;
         }
         .header p {
-            font-size: 20px;
+            font-size: 22px;
             opacity: 0.9;
+            margin-top: 10px;
         }
+        
+        /* --- General Section Styling --- */
         .section {
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
         .section h2 {
-            font-size: 32px;
-            color: #007AFF;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary-color);
             margin-bottom: 20px;
         }
+        .section > p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #555;
+        }
+        
+        /* --- Features Section --- */
         .features {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 40px;
+            gap: 30px;
+            margin-top: 50px;
         }
         .feature-item {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            width: 250px;
+            background: var(--white-color);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px var(--shadow-color);
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-item:hover {
+            /* Add a subtle lift effect on hover */
+            transform: translateY(-10px);
+            box-shadow: 0 12px 32px var(--shadow-color);
+        }
+        .feature-item .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
         }
         .feature-item h3 {
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: 600;
             margin-top: 0;
+            margin-bottom: 10px;
         }
+        .feature-item p {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* --- App Store Buttons --- */
         .store-buttons {
-            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
         }
         .store-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            background: #333;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background: var(--dark-color);
+            color: var(--white-color);
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
+        .store-button:hover {
+            transform: scale(1.05);
+            background: #000;
+        }
+        .store-button .icon {
+            font-size: 28px;
+            margin-right: 12px;
+            line-height: 1;
+        }
+        .store-button div {
+            text-align: left;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+        .store-button strong {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        /* --- Footer Section --- */
         .footer {
             text-align: center;
             padding: 40px 20px;
-            border-top: 1px solid #dee2e6;
+            background: var(--light-color);
+            border-top: 1px solid var(--border-color);
             margin-top: 40px;
         }
-        .footer a {
-            color: #007AFF;
+        .footer .links a {
+            color: var(--primary-color);
             text-decoration: none;
             margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .footer .links a:hover {
+            color: #0056b3;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -97,8 +184,23 @@
             <h2>Know the power status, instantly.</h2>
             <p>TowerLite provides real-time, user-submitted reports on power outages and restorations in your area. Stop guessing and get updates from your community.</p>
             <div class="store-buttons">
-                <a href="#" class="store-button">Download on the App Store</a>
-                <a href="#" class="store-button">Get it on Google Play</a>
+                <!-- Placeholder links for app stores. Replace # with your store links when ready -->
+                <a href="#" class="store-button">
+                    <span class="icon"></span>
+                    <div>
+                        <span>Download on the</span><br>
+                        <strong>App Store</strong>
+                    </div>
+                </a>
+                <a href="#" class="store-button">
+                     <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 22V2L21 12L3 22Z"/></svg>
+                     </span>
+                     <div>
+                        <span>GET IT ON</span><br>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -106,14 +208,17 @@
             <h2>Core Features</h2>
             <div class="features">
                 <div class="feature-item">
+                    <div class="icon">⚡️</div>
                     <h3>Real-Time Reports</h3>
                     <p>Get live updates from users in your community about power status.</p>
                 </div>
                 <div class="feature-item">
+                    <div class="icon">🗺️</div>
                     <h3>Interactive Map</h3>
                     <p>Visualize outages and see what areas are affected on a live map.</p>
                 </div>
                 <div class="feature-item">
+                    <div class="icon">👥</div>
                     <h3>Community Driven</h3>
                     <p>Contribute reports, earn points, and help keep your neighbors informed.</p>
                 </div>
@@ -122,12 +227,12 @@
     </div>
 
     <div class="footer">
-        <p>© 2025 TowerLite</p>
-        <p>
+        <div class="links">
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="terms.html">Terms of Service</a>
             <a href="delete-account.html">Account Deletion</a>
-        </p>
+        </div>
+        <p class="copyright">© 2025 TowerLite</p>
     </div>
 </body>
 </html>
