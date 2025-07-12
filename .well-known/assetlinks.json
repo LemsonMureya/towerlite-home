@@ -1,0 +1,27 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.towerlite.app",
+      "sha256_cert_fingerprints": [
+        "5E:CC:9E:30:F2:63:73:B4:F0:ED:F7:B0:C5:8E:AD:65:8F:51:4E:0D:3F:E0:2D:6E:2E:3C:0A:72:39:73:91:56",
+        "B3:2B:C1:BD:DC:BD:74:42:20:36:77:E0:78:01:E2:F3:36:13:46:35:7F:9D:56:B9:6D:BA:E0:4D:2C:E4:F5:47"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.towerlite.app.dev",
+      "sha256_cert_fingerprints": [
+        "EF:FE:9D:15:61:08:34:DA:F2:51:32:80:C1:06:06:2F:A8:5B:10:1D:84:58:FA:47:A8:4A:FA:12:2B:59:6B:86"
+      ]
+    }
+  }
+]
