@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["94ABLJ4V98.com.towerlite.app", "94ABLJ4V98.com.towerlite.app.dev"],
+        "components": [
+          {
+            "/": "/report/*",
+            "comment": "Matches any report path"
+          }
+        ]
+      }
+    ]
+  }
+}
